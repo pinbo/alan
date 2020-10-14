@@ -106,7 +106,8 @@ function go {
 	paste <(printf -- "$labels") <(printf -- "$seqs_t") | less -SR --shift $SHIFT
 }
 
-default_n="Aa\t01;31\nGg\t01;33\nCc\t01;32\nTt\t01;34"
+#default_n="Aa\t01;31\nGg\t01;33\nCc\t01;32\nTt\t01;34"
+default_n="Aa\t00;30;41\nGg\t00;30;43\nCc\t00;30;42\nTt\t00;30;46"
 default_p="KkRr\t01;41\nSsTtQqNn\t01;37;42\nAaIiLlMmFfWwVvCc\t01;44\nCc\t01;105\nEeDd\t01;45\nGg\t01;90;103\nHhYy\t01;46\nPp\t01;90;43"
 
 function go_fasta {
