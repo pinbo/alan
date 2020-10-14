@@ -103,7 +103,7 @@ function go {
 	sedstring=`echo "$sedstring" | sed -r "s/^[ \t;]+//g"`
 	seqs=`sed -r "s/^>(.*)$/£££>\1##$gromit###/g" $file | tr '\n' ' ' | sed -r "s/£££/\n/g" | sed -r "s/ //g" | grep -v "^$" | sed -r "$sedstring"`
 	seqs_t=`printf "$seqs" | sed -r "s/.*###//g" | sed -r "s/@/m/g" | sed -r "s/=/\[/g" | sed -r "s/£/\\\\\\/g"`
-	paste <(printf -- "$labels") <(printf -- "$seqs_t") | less -SR --shift $SHIFT
+	paste <(printf -- "$labels") <(printf -- "$seqs_t") | less -NSR --shift $SHIFT
 }
 
 #default_n="Aa\t01;31\nGg\t01;33\nCc\t01;32\nTt\t01;34"
